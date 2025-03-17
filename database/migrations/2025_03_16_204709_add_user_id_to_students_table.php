@@ -12,7 +12,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('students', function (Blueprint $table) {
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->bigInteger('user_id')->unsigned()->nullable();
         });
     }
     
@@ -22,5 +22,4 @@ return new class extends Migration
             $table->dropColumn('user_id');
         });
     }
-    
 };

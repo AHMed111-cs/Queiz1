@@ -16,6 +16,10 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{route('products_list')}}">Products</a>
             </li>
+            <!-- تعديل الرابط هنا ليتناسب مع المسار الصحيح students.index -->
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('students.index') }}">Students</a>
+            </li>
         </ul>
         <ul class="navbar-nav">
             @auth

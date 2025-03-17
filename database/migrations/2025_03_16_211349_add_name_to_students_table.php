@@ -12,15 +12,14 @@ return new class extends Migration
     public function up()
     {
         Schema::table('students', function (Blueprint $table) {
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->string('name');  // إضافة عمود name
         });
     }
     
     public function down()
     {
         Schema::table('students', function (Blueprint $table) {
-            $table->dropColumn('user_id');
+            $table->dropColumn('name');  // حذف عمود name
         });
     }
-    
 };
